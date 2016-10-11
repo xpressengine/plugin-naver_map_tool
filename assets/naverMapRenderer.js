@@ -56,6 +56,9 @@
             var lng = $(tar).data('lng');
             var text = $(tar).data('text').toString();
             var zoom = $(tar).data('zoom') || 10;
+            var width = $(tar).data('width');
+
+            $(tar).css('width', width);
 
             var map = new win.naver.maps.Map(tar, {
                 center: new win.naver.maps.LatLng(lat, lng),
