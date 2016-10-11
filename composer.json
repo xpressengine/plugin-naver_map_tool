@@ -1,0 +1,47 @@
+{
+  "name": "xpressengine-plugin/naver_map_tool",
+  "description": "This Package is Xpressengine Plugin - Naver map tool for editor.",
+  "keywords": [
+    "xpressengine",
+    "plugin"
+  ],
+  "license": "LGPL-2.0",
+  "version": "1.0.0",
+  "type": "xpressengine-plugin",
+  "support": {
+    "email": "input@your.email"
+  },
+  "authors": [
+    {
+      "name": "input your name",
+      "email": "input@your.email",
+      "homepage": "http://input.your.site",
+      "role": "Developer"
+    }
+  ],
+  "extra": {
+    "xpressengine": {
+      "title": "Naver map tool for editor",
+      "component": {
+        "editortool/navermap@navermap": {
+          "class": "Xpressengine\\Plugins\\NaverMapTool\\NaverMapTool",
+          "name": "Naver map tool for editor",
+          "description": "에디터에 네이버지도를 삽입해줌"
+        }
+      }
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packagist.xpressengine.io/"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Xpressengine\\Plugins\\NaverMapTool\\": "src/"
+    }
+  }
+}
