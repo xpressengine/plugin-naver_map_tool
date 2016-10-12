@@ -14,7 +14,7 @@ XEeditor.tools.define({
 
         },
         beforeSubmit: function(targetEditor) {
-            $(targetEditor.document.$.querySelectorAll('[data-navermap]')).empty();
+            $(targetEditor.document.$.querySelectorAll('[data-navermap]')).empty().css({background: ''});
             targetEditor.updateElement();
         },
         editorLoaded: function(targetEditor) {
@@ -24,7 +24,6 @@ XEeditor.tools.define({
                 $(targetEditor.document.$.querySelectorAll('[data-navermap]')).naverMapRender({
                     win: editorWindow,
                     callback: function (el) {
-                        $(el).attr('xe-tool-id', 'editortool/navermap@navermap');   //TODO:: core레벨에서 들어가고 있어서 수정되어야함. 
                         $(el).prepend('<button type="button" class="btnEditMap" style="position:absolute;z-index:1;left:0;top:0">Edit</button>');
                     }
                 });

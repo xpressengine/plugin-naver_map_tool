@@ -136,7 +136,7 @@
                 var zoom = map.getZoom();
 
                 var dom = [
-                    '<div xe-tool-id="editortool/navermap@navermap"',
+                    '<div ',
                         ' id="navermap_' + uuid + '"',
 //                        ' contenteditable="true" data-navermap',
                         ' data-navermap',
