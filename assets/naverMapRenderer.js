@@ -52,13 +52,11 @@
             $tar = this instanceof jQuery ? this : $(this);
 
         var render = function (tar, win, callback) {
-            var lat = $(tar).data('lat');
-            var lng = $(tar).data('lng');
-            var text = $(tar).data('text').toString();
-            var zoom = $(tar).data('zoom') || 10;
-            var width = $(tar).data('width');
-
-            $(tar).css('width', width);
+            var toolData = JSON.parse($(tar).attr('xe-tool-data').replace(/'/g, '"'));
+            var lat = toolData.lat;
+            var lng = toolData.lng;
+            var text = toolData.text;
+            var zoom = toolData.zoom || 10;
 
             var map = new win.naver.maps.Map(tar, {
                 center: new win.naver.maps.LatLng(lat, lng),

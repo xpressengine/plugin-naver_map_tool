@@ -135,17 +135,19 @@
                 var height = $('#vSize').val() + $('#vSize').parent().find('.text-measure').text();
                 var zoom = map.getZoom();
 
+                var toolData = JSON.stringify({
+                    width: width,
+                    height: height,
+                    text: text,
+                    lat: lat,
+                    lng: lng,
+                    zoom: zoom
+                }).replace(/"/g, "'");
+
                 var dom = [
                     '<div ',
                         ' id="navermap_' + uuid + '"',
-//                        ' contenteditable="true" data-navermap',
-                        ' data-navermap',
-                        ' data-width="' + width + '"',
-                        ' data-height="' + height + '"',
-                        ' data-text="' + text + '"',
-                        ' data-lat="' + lat + '"',
-                        ' data-lng="' + lng + '"',
-                        ' data-zoom="' + zoom + '"',
+                        ' xe-tool-data="' + toolData + '"',
                         ' style="width:' + width + ';height:' + height + '"></div>'
                 ].join('\n');
 
