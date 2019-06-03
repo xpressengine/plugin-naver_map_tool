@@ -1,6 +1,6 @@
 {
   "name": "xpressengine-plugin/naver_map_tool",
-  "description": "This Package is Xpressengine Plugin - Naver map tool for editor.",
+  "description": "글 작성시 네이버 지도를 추가할 수 있는 기능을 제공합니다.",
   "keywords": [
     "xpressengine",
     "plugin"
@@ -15,7 +15,7 @@
     {
       "name": "XE Developers",
       "email": "developers@xpressengine.com",
-      "homepage": "http://xpressengine.io",
+      "homepage": "https://store.xehub.io/plugins/naver_map_tool",
       "role": "Developer"
     }
   ],
